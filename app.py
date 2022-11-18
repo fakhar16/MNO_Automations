@@ -1,16 +1,19 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import git
 
-app = Flask(__name__ )
+app = Flask(__name__)
 
 @app.route('/git_update', methods=['POST'])
 def git_update():
-    repo = git.repo('./MNO_Automations')
-    origin = repo.remotes.origin
-    repo.create_head('main',
-                     origin.refs.main).set_tracking_branch(origin.refs.main).checkout()
-    origin.pull()
-    return '', 200
+    if request.method == 'POST':
+        repo = git.Repo('./MNO_Automations')
+        origin = repo.remotes.origin
+        repo.create_head('master',
+                         origin.refs.master).set_tracking_branch(origin.refs.master).checkout()
+        origin.pull()
+        return '', 200
+    else:
+        return '', 400
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
