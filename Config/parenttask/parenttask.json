@@ -1,0 +1,14 @@
+{
+  "summary": "[TabS7 FE T OS] Platform Solutions IOT",
+  "project": { "key": "MNOSOLTNS" },
+  "assignee": { "name": "fakhar.ahmad" },
+  "issuetype": { "name": "Task" },
+  "priority": { "name": "Major" },
+  "customfield_13808": "VZW",
+  "customfield_10402": 9,
+  "customfield_14103": {
+    "value": "Communication/Collaboration (Carrier/External)"
+  },
+  "components": [{ "name": "Platform/IOT" }],
+  "description": "<p>Refer timelines here:</p><p><a href=\"https://mobilerndhub.sec.samsung.net/wiki/display/~avinash.g/IOT+Status\">https://mobilerndhub.sec.samsung.net/wiki/display/~avinash.g/IOT+Status</a>&nbsp;</p><p>&nbsp;</p><p>This task captures all steps to be taken for completion of Platform solutions IOT for New devices and OS upgrades.</p><p>The Task will be created when a device is planned and started 5 Weeks prior to software submision.</p><p>6 Weeks remaining: Platform solutions team start the Pre-Test.&nbsp;</p><p>4 Weeks remaining: Ship Devices/ Software&nbsp;to carrier teams.</p><p>2.5 Weeks remaining: Ensure that reports are available.&nbsp;</p><p>2 Weeks (New devices) or 1 Week (SU)&nbsp;remaining: Share with TPM.</p>"
+}

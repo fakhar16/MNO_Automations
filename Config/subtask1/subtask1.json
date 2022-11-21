@@ -1,0 +1,13 @@
+{
+  "parent": { "key": "subtask" },
+  "project": { "key": "MNOSOLTNS" },
+  "assignee": { "name": "fakhar.ahmad" },
+  "issuetype": { "name": "Sub-Task" },
+  "priority": { "name": "Major" },
+  "customfield_14103": {
+    "value": "Communication/Collaboration (Carrier/External)"
+  },
+  "components": [{ "name": "Platform/IOT" }],
+  "summary": "Pre-Test POA IOT",
+  "description": "<p>[Short Term] Confirm that POA test works with PCO 0 SIM using the on device simulation.<br>\r\nOutput: Results of B2B SIM, POA new order (Setup Wizard), POA upgrade order (Setup Wizard/ Post Setup).<br>\r\n<br>\r\n[Long Term] Test POA IOT using the VZ POA portal. All tests need to be performed. Report issues via PLM.<br>\r\nOutput: POA Pre-Test report which can be shared with Verizon.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>All issues for HQ/ SRIN should be reported via PLM. PLM should be tracked in the task.</p>\r\n\r\n<p>Target completion by 4 week before submission.</p>\r\n"
+}

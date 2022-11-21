@@ -1,0 +1,110 @@
+<html>
+<head>
+	<style>
+		.center {
+		  margin:0 auto;
+		  margin-right: 50%;
+		}
+	</style>
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/loading_spinner.css') }}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+	  <script type="text/javascript">
+		$(document).ready(function() {
+			$('#ticket_details_form').on('submit', function(e) {
+				showLoading();
+				hideForm();
+				document.getElementById("createBtn").disabled = true;
+				$.ajax({
+					data : {
+						username : $('#username').val(),
+						password : $('#password').val(),
+						title : $('#title').val(),
+						assignee : $('#assignee').val(),
+						duedate : $('#duedate').val(),
+					},
+					type : 'POST',
+					url : '/get_data_us_jira'
+				}).done(function(data){	
+					setTicketLink(data.output);
+				});
+				e.preventDefault();
+			});
+		});
+
+		function showLoading() {
+			$('#loading_spinner').show();
+		}
+
+		function hideLoading() {
+			$('#loading_spinner').hide();
+		}
+
+		function showForm() {
+			$('#ticket_details_form').show();
+			$('#header_title').show();
+			document.getElementById('ticket_details_form').reset();
+			document.getElementById("createBtn").disabled = false;
+		}
+
+		function hideForm() {
+			$('#ticket_details_form').hide();
+		}
+
+		function tryAgain() {
+			$('#output').hide();
+			$('#ticket_link').hide();
+			$('#header_title').hide();
+			showForm();
+			showLoading();
+			setTimeout( function() { hideLoading(); }, 2000);
+		}
+
+		function setTicketLink(url_ticket) {
+			if (url_ticket.includes("Invalid")) {
+				showFailScreen(url_ticket);
+			} else {
+				$('#output').text("To Access jira ticket ").show();
+				$('#ticket_link').text("Click here").show();
+				$('#ticket_link').attr("href", url_ticket);
+			}
+			
+			hideLoading();
+		}
+
+		function showFailScreen(reason) {
+			if (reason == "Invalid Username/Password") {
+				$('#output').text("Authentication Failed. Invalid Username or Password").show();
+			} else if (reason == "Invalid Assignee") {
+				$('#output').text("Assignee user is invalid or doesn't exist ").show();
+			}
+			$('#ticket_link').text("Try again!").show();
+			$('#ticket_link').attr("href", "javascript:tryAgain();");
+		}
+	  </script>
+</head>
+<body>
+<div class="container">
+	<div class="right">
+	</div>
+	<div class="left">
+	  <div class="header" id="header_title">
+		<h2 class="animation a1">MNO Jira Automation</h2>
+		<h4 class="animation a2">Enter required details to create ticket</h4>
+	  </div>
+	  <div id="loading_spinner" class="loader center" style="display: none"></div>
+	  <form class="form" id="ticket_details_form">
+		<input id="username" type="text" class="form-field animation a3" placeholder="Username" required required/>
+		<input id="password" type="password" class="form-field animation a4" placeholder="Password" required/>
+		<input id="title" type="text" class="form-field animation a5" placeholder="Title" class="input" name="title" required/>
+		<input id="assignee" type="text" class="form-field animation a6" placeholder="Assignee" class="input" name="assignee" required/>
+		<input id="duedate" type="date" class="form-field animation a7" placeholder="DueDate" class="input" name="duedate" required/>
+		<button id="createBtn" class="button-29 animation a6" type="submit" name="button">Create</button>
+	  </form>
+	  <div id="output"></div>
+	  <a id="ticket_link" href="#"></a>
+	</div>
+  </div>
+</body>
+</html>

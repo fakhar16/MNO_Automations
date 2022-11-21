@@ -1,0 +1,13 @@
+{
+  "parent": { "key": "subtask" },
+  "project": { "key": "MNOSOLTNS" },
+  "assignee": { "name": "fakhar.ahmad" },
+  "issuetype": { "name": "Sub-Task" },
+  "priority": { "name": "Major" },
+  "customfield_14103": {
+    "value": "Communication/Collaboration (Carrier/External)"
+  },
+  "components": [{ "name": "Platform/IOT" }],
+  "summary": "Pre-Test Unified Settings and platform",
+  "description": "<p>Run Unified Settings and android IOT.<br>\r\nOutput: Unified Settings and Custom Intent sheets which will be shared with Verizon.</p>\r\n"
+}

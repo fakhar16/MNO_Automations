@@ -1,0 +1,13 @@
+{
+  "parent": { "key": "subtask" },
+  "project": { "key": "MNOSOLTNS" },
+  "assignee": { "name": "fakhar.ahmad" },
+  "issuetype": { "name": "Sub-Task" },
+  "priority": { "name": "Major" },
+  "customfield_14103": {
+    "value": "Communication/Collaboration (Carrier/External)"
+  },
+  "components": [{ "name": "Platform/IOT" }],
+  "summary": "Unified Settings/ Android IOT report",
+  "description": "<p>Follow up with VZ POA POC for POA test status.</p>\r\n\r\n<p>&gt;&gt; If any issue reported, guide POA POC with how to collect logs. Report in PLM.</p>\r\n\r\n<p>&gt;&gt; Share new software (contact Avinash) and guide with flashing. If needed meet the VZ engineer for joint test/ updating software.</p>\r\n\r\n<p>&gt;&gt; Once report is received,&nbsp;attach to this task and close.</p>\r\n"
+}

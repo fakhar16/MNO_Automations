@@ -1,0 +1,14 @@
+{
+  "parent": { "key": "subtask" },
+  "project": { "key": "MNOSOLTNS" },
+  "assignee": { "name": "fakhar.ahmad" },
+  "issuetype": { "name": "Sub-Task" },
+  "priority": { "name": "Major" },
+  "customfield_14103": {
+    "value": "Communication/Collaboration (Carrier/External)"
+  },
+  "components": [{ "name": "Platform/IOT" }],
+  "summary": "Ship devices/ software to POA and Unified Settings owners",
+  "attachment": "attachments",
+  "description": "<p>Flash user software.</p>\r\n\r\n<p>Enable hidden menu on device.</p>\r\n\r\n<p>Ship devices. Transfer in the NASMS system.</p>\r\n\r\n<p>Unified Settings & POA: Ravikishore Kantem (Flagships), Sonal Patel (A Series/ Tablets).</p>\r\n\r\n<p>Sample shipping forms attached.&nbsp;</p>\r\n\r\n<p>Make sure to capture proper model name and IMEI. Copy Avinash in all shipping requests.</p>\r\n"
+}

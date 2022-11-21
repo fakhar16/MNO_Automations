@@ -12,3 +12,4 @@ Werkzeug==2.2.2
 zipp==3.10.0
 
 bottle~=0.12.23
+jira~=3.4.1
