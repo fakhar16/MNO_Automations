@@ -2,16 +2,15 @@
 <html lang="en">
     <head>
         <title>Automations by MNO PTSOL</title>
-
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/templatemo-kind-heart-charity.css') }}">
     </head>
 
     <body>
         <nav class="navbar bg-light shadow-lg">
             <div class="my_header">
                 <a class="navbar-brand" href="index.html">
-                    <img src="images/logo.png" class="logo">
+                    <img src="{{ url_for('static', filename='css/logo.png') }}" class="logo">
                     <span>
                         Automations by MNO PTSOL
                         <small>Empowering team</small>
@@ -31,7 +30,7 @@
                         <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
                             <div class="featured-block d-flex justify-content-center align-items-center">
                                 <a href="/us_jira" class="d-block">
-                                    <img src="images/icons/hands.png" width="40%" height="40%">
+                                    <img src="{{ url_for('static', filename='css/icon1.png') }}" width="40%" height="40%">
 
                                     <p class="featured-block-text">Jira task creation for <strong>Platform Solutions IOT</strong></p>
                                 </a>
@@ -77,7 +76,7 @@
             <div class="my_header">
                 <div class="row">
                     <div class="col-lg-3 col-12 mb-4">
-                        <img src="images/logo.png" width="30%" height="auto">
+                        <img src="{{ url_for('static', filename='css/logo.png') }}" width="30%" height="auto">
                     </div>
 
                     <div class="col-lg-1 col-md-6 col-12 mx-auto">
