@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request
+import os
 import git
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -19,4 +20,9 @@ def git_update():
 
 @app.route('/')
 def home():
-    return render_template("index.html")
+    return os.environ.get('APP_ENV', 'Dev')
+    # return render_template("index.html")
+
+# if __name__ == "__main__":
+#     print(os.environ.get('APP_ENV', 'Dev'))
+#     app.run()
