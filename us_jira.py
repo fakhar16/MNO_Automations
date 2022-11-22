@@ -33,11 +33,13 @@ def get_form_data():
         if not check_if_user_exist(jira, assignee):
             return jsonify({'output': "Invalid Assignee"})
 
-        ticket_url = read_json_and_create_issues(jira, title, assignee, duedate)
-        return jsonify({'output': ticket_url})
-
-    if 'ticket_url' in locals():
-        return render_template("us_jira.html", ticket_url)
+        return jsonify({'output': "Login successfull"})
+    #
+    #     ticket_url = read_json_and_create_issues(jira, title, assignee, duedate)
+    #     return jsonify({'output': ticket_url})
+    #
+    # if 'ticket_url' in locals():
+    #     return render_template("us_jira.html", ticket_url)
 
     return render_template("us_jira.html")
 
